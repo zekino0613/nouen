@@ -1,0 +1,33 @@
+@charset "UTF-8";
+// ==========================================================================
+// Foundation
+// ==========================================================================
+
+@use "../sass/_foundation/_reset";
+@use "../sass/_foundation/_mixin";
+@use "../sass/_foundation/_base";
+
+
+// ==========================================================================
+// Layout
+// ==========================================================================
+
+@use "../sass/_layout/_header";
+@use "../sass/_layout/_footer";
+
+
+// ==========================================================================
+// Project
+// ==========================================================================
+@use "../sass/_project/_mainvisual";
+@use "../sass/_project/_about";
+@use "../sass/_project/_FAQ";
+@use "../sass/_project/_news";
+@use "../sass/_project/_access";
+@use "../sass/_project/_info";
+@use "../sass/_project/_work";
+@use "../sass/_project/_news-list";
+@use "../sass/_project/_news-detail";
+@use "../sass/_project/_otoiawase";
+@use "../sass/_project/_form-kakunin";
+@use "../sass/_project/_form-comp";

@@ -1,0 +1,400 @@
+@use "../_foundation/mixin"as mixin;
+@use "../_foundation/base"as base;
+
+#news-detail {
+  max-width: 960px;
+  width: 100%;
+  margin: 132px auto 0 auto;
+  .news-detail {
+    &__h2 {
+      margin: 60px 0 14px ;
+      font-size: 40px;
+    }
+
+
+    &__date {
+      font-size: 16px;
+      padding: 0 0 53px;
+      font-family: 'Archivo Narrow';
+      letter-spacing: 0.8px;
+      .page-category {
+        font-size: 14px;
+        color: white;
+        background-color: #93C572;
+        margin-left: -2px;
+        border-radius: 5px;
+        text-align: center;
+        padding: 2px 5px;
+      }
+    }
+
+    &__wrapper {
+      max-width: 960px;
+      width: 100%;
+      background-color: #FFFFFF;
+      box-shadow: 1px 1px 10px #00000029;
+      border-radius: 100px;
+      padding: 50px 20px;
+        &--inner {
+          max-width: 600px;
+          width: 100%;
+          margin: 0 auto;
+          .detail__img {
+            width: 100%;
+            box-shadow: 0px 3px 6px #00000029;
+            border-radius: 20px;
+          }
+
+          .detail-list {
+            max-width: 600px;
+            width: 100%;
+            border: 2px solid #93C572;
+            border-radius: 20px;
+            padding: 28px;
+            margin: 23px 0;
+          
+              h2 {
+                font-size: 20px;   
+                letter-spacing: 0;   
+                margin: -5px 0 8px 0;      
+              }
+              .title-h2 {
+                font-size: 16px;
+                font-weight: bold;
+                padding-left: 20px;
+                letter-spacing: 0.8px;
+                transition: all 0.3s ease; //追加
+                span {
+                  color: #F7B560;
+                }
+              }
+
+              .title-h2:hover {
+                opacity: 0.7;
+                transition: all 0.3s ease; //追加
+              }
+
+              .title-h3 {
+                position: relative;
+                font-size: 16px;
+                font-weight: bold;
+                padding-left: 34px;
+                transition: all 0.3s ease; //追加
+                  span {
+                    color: #93C572;
+                    padding-right: 6px;
+                  }
+              }
+              
+              .title-h3:hover {
+                opacity: 0.7;
+                transition: all 0.3s ease; //追加
+              }
+          }
+
+          .textarea {
+            &__title-h2 {
+              font-size: 24px;
+              text-decoration: underline 2px #93C572;
+              margin: 80px 0 18px;
+              letter-spacing: 0;
+              line-height: 27px;
+            }
+
+            &__title-h3 {
+              font-size: 20px;
+              padding-left: 20px;
+              position: relative;
+              margin: -6px 0 20px;
+                
+            }
+
+            &__title-h3::before {
+              content: "";
+              width: 10px;
+              background-color: #93c572;
+              position: absolute;
+              left: 0px;
+              min-height: 20px;
+              bottom: 7px;      
+            }
+
+            &__text {
+              font-size: 16px;
+              margin: 0 0 40px;
+            }
+
+            &__text2 {
+              font-size: 16px;
+              margin: -10px 0 40px;
+            }
+
+            &__li {
+              margin: -12px 0 30px;
+                li {
+                  font-size: 16px;
+                  line-height: 27px;
+                }
+            }
+
+            .textarea-flex {
+              display: flex;
+              width: 100%;
+              margin: 0 0 33px;
+              &__img {
+                width: 290px;
+                height: 286px;
+                box-shadow: 0px 3px 6px #00000029;
+                border-radius: 20px;
+                margin-left: 20px;  
+              }
+
+              &__text {
+                text-align: left;
+                font-size: 16px;
+                line-height: 27px;
+                margin: -6px 0 0 0;
+              }
+            }
+          }
+
+          .btn {
+            .green-btn {
+              margin: 80px  auto 0;
+            }
+          }
+        }
+    }  
+  }
+} 
+
+
+
+
+
+@include mixin.TAB {
+  #news-detail {
+    max-width: 960px;
+    width: 100%;
+    margin: 70px auto 0 auto;
+    padding: 0 16px 0 12px;
+    .news-detail {
+      &__h2 {
+        margin: 39.48px 0 22.42px 0;
+        font-size: 25px;
+      }
+
+      &__wrapper {
+        max-width: 960px;
+        width: 100%;
+        background-color: #FFFFFF;
+        box-shadow: 1px 1px 10px #00000029;
+        border-radius: 50px;
+        padding: 50px 20px;
+          &--inner {
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+              .detail__img {
+                width: 100%;
+                box-shadow: 0px 3px 6px #00000029;
+                border-radius: 20px;
+              }
+              .textarea {
+                .textarea-flex {
+                  display: flex;
+                  flex-direction: column;
+                  margin: 0 0 40px;
+                  &__img {
+                    width: 100%;
+                    height: auto;
+                    box-shadow: 0px 3px 6px #00000029;
+                    border-radius: 20px; 
+                    padding: 20px 0 0 ;
+                    margin-left: 0;
+                    
+                  }
+                }
+              }  
+          }  
+      }
+    }  
+  }
+} 
+
+
+@include mixin.SP {
+  #news-detail {
+    max-width: 960px;
+    width: 100%;
+    margin: -63px auto 97px ;
+    padding: 0px 8px;
+    .news-detail {
+      &__h2 {
+        margin: 9px 0px 6px -5px;
+        font-size: 25px;
+        letter-spacing: 2.5px;
+        line-height: 37px;
+      }
+
+      
+    &__date {
+      font-size: 16px;
+      margin: 11px 0px -8px -1px;
+      padding: 0px 0 47px 0;
+      font-family: 'Archivo Narrow';
+      letter-spacing: -1.2px;
+      span {
+        font-size: 14px;
+        color: white;
+        background-color: #93C572;
+        margin: 0px 0px 0px 17px;
+        border-radius: 5px;
+        text-align: center;
+        padding: 2.2px 9px;
+      }
+    }
+
+
+
+      &__wrapper {
+        max-width: 960px;
+        width: 100%;
+        background-color: #FFFFFF;
+        box-shadow: 1px 1px 10px #00000029;
+        border-radius: 50px;
+        padding: 30px 20px;
+          &--inner {
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+            .detail__img {
+              width: 100%;
+              box-shadow: 0px 3px 6px #00000029;
+              border-radius: 20px;
+            }
+          }
+
+          .detail-list {
+            max-width: 600px;
+            width: 100%;
+            border: 2px solid #93C572;
+            border-radius: 20px;
+            padding: 15px 15px 26px 15px;
+            margin: 20px 0 43px;
+              h2 {
+                font-size: 20px;   
+                letter-spacing: 0; 
+                padding: 0 ;          
+                margin: -5px 0px 7px -5px;
+              }
+              .title-h2 {
+                font-size: 14px;
+                font-weight: bold;
+                padding-left: 0;
+                margin: 9px 0 5px -3px;
+                transition: all 0.3s ease; //追加
+                span {
+                  color: #F7B560;
+                }
+              }
+
+              .title-h2:hover {
+                opacity: 0.7;
+                transition: all 0.3s ease; //追加
+              }
+
+              .title-h3 {
+                position: relative;
+                padding-left: 60px;
+                font-size: 14px;
+                font-weight: bold;
+                padding-left: 19px;
+                margin: -2px 0px 0px -8px;
+                transition: all 0.3s ease; //追加
+                  span {
+                    color: #93C572;
+                    padding-right: 6px;
+                  }
+              }
+              
+              .title-h3:hover {
+                opacity: 0.7;
+                transition: all 0.3s ease; //追加
+              }
+          }
+
+          .textarea {
+            &__title-h2 {
+              font-size: 20px;
+              text-decoration: underline 2px #93C572;
+              margin: -3px 0px 0 -1px;
+            }
+
+            &__title-h3 {
+              font-size: 18px;
+              padding-left: 15px;
+              position: relative;
+              margin: -9px 0 10px 3px;
+              line-height: 27px;
+            }
+
+            &__title-h3::before {
+              content: "";
+              width: 10px;
+              height: 45px;
+              background-color: #93c572;
+              position: absolute;
+              left: -5px;
+              min-height: 20px;
+              bottom: 6px;
+            }
+
+            
+
+            &__text {
+              font-size: 16px;
+              margin: 13px 0 35px -2px;
+              line-height: 27px;
+            }
+
+            &__text2 {
+              font-size: 16px;
+              margin: -5px 0 -32px -1px;
+            }
+
+            &__li {
+              margin:12px 0 -2px -2px;
+            }
+
+          .textarea-flex {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: 0 0 40px;
+            &__img {
+              width: 100%;
+              height: auto;
+              box-shadow: 0px 3px 6px #00000029;
+              border-radius: 40px; 
+              padding: 20px 0 0 ;
+              margin: 0 0 40px;
+          
+            }
+
+            &__text {
+              padding: 0px 9px 0 4px;
+              margin: 10px 0 0 -7px;
+            }
+          }
+        }
+
+        #textarea {
+          &__title-2h3 {
+            margin: -15px 0 16px;
+          }
+        }
+      }    
+    }  
+  }
+}

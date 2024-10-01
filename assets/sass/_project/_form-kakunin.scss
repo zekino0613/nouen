@@ -1,0 +1,226 @@
+@use "../_foundation/mixin"as mixin;
+@use "../_foundation/base"as base;
+
+#kakunin {
+  max-width: 960px;
+  width: 100%;
+  margin: 131px auto 0 auto;
+  padding: 0 0px 0 0px;
+    
+
+    .section-title {
+      margin: 59px 0 45px 0px;
+    }
+
+
+    .form-detail {
+      &__wrapper {
+        max-width: 960px;
+        width: 100%;
+        background-color: #FFFFFF;
+        box-shadow: 1px 1px 10px #00000029;
+        border-radius: 100px;
+        padding: 80px 50px 82px 50px;
+        margin: -6px 0 160px;
+          &--inner {
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+              .form-list {
+                  dt {
+                      font-size: 20px;
+                      font-weight: bold;
+                      display: flex;
+                      align-items: center;
+                    
+                    span {
+                      width: 34px;
+                      font-size: 12px;
+                      font-weight: normal;
+                      color: white;
+                      background-color: #93C572;
+                      margin-left: 9px;
+                      border-radius: 5px;
+                      text-align: center;
+                      padding: 1px 5px;
+                      line-height: 20px;
+                    }
+                  } 
+
+                  .otoiawase_dt {
+                    margin: -7px 0 0px 0;
+                  }
+                  .name_dt {
+                    margin: 49px 0 0 0;
+                  }
+                  .email_dt {
+                    margin: 50px 0 0 0;
+                  }
+                  .tel_dt {
+                    margin: 53px 0 0 0;
+                  }
+                  .message_dt {
+                    margin: 50px 0 0 0;
+                  }
+
+                  dd {
+                    font-size: 16px;
+                    margin: 15px auto 31px;
+                  }
+
+                  .otoiawase_dd {
+                    margin: 16px 0;
+                  }
+                  .name_dd {
+                    margin: 16px 0;
+                  }
+                  .email_dd {
+                    margin: 16px 0;
+                  }
+                  .tel_dd {
+                    margin: 16px 0;
+                  }
+                  .message_dd {
+                    margin: 96px 0 0 0;
+                  }
+              }
+              .green-btn {
+                margin: 153px auto 0;
+                font-size: 16px;
+                font-weight: bold;
+                max-width: 200px;
+                width: 100%;
+                height: 50px;
+              }
+          }  
+      }
+    }
+}
+
+
+
+@include mixin.TAB {
+  #kakunin {
+      .breadcrumb {
+        margin: 0;
+      }
+      .section-title {
+        margin: 0;
+        h2 {
+          margin: 43.58px 0 25.42px ;
+        }  
+      }
+
+      .kakunin-detail {
+        &__wrapper {
+          border-radius: 50px;
+          padding: 30px 20px;
+          margin: 0 0 61px;
+          
+        }  
+    }
+  }
+}
+
+
+@include mixin.SP {
+  
+#kakunin {
+  max-width: 960px;
+  width: 100%;
+  margin: 8px auto 0 auto;
+  padding: 0 7px;
+    
+
+  .section-title {
+    margin: -21px 0px 0 -2px;
+    h2 {
+      margin: 43.58px 0 25.42px ;
+    }  
+  }
+
+
+    .form-detail {
+      &__wrapper {
+        max-width: 960px;
+        width: 100%;
+        background-color: #FFFFFF;
+        box-shadow: 1px 1px 10px #00000029;
+        border-radius: 50px;
+        padding: 29px 18px 32px 19px;
+        margin: -6px 0 160px;
+          &--inner {
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+              .form-list {
+                  dt {
+                      font-size: 20px;
+                      font-weight: bold;
+                      display: flex;
+                      align-items: center;
+                    
+                    span {
+                      width: 34px;
+                      font-size: 12px;
+                      font-weight: normal;
+                      color: white;
+                      background-color: #93C572;
+                      margin-left: 9px;
+                      border-radius: 5px;
+                      text-align: center;
+                      padding: 1px 5px;
+                      line-height: 20px;
+                    }
+                  } 
+
+                  .otoiawase_dt {
+                    margin: -7px 0 0px 0;
+                  }
+                  .name_dt {
+                    margin: 49px 0 0 0;
+                  }
+                  .email_dt {
+                    margin: 50px 0 0 0;
+                  }
+                  .tel_dt {
+                    margin: 53px 0 0 0;
+                  }
+                  .message_dt {
+                    margin: 50px 0 0 0;
+                  }
+
+                  dd {
+                    font-size: 16px;
+                    margin: 15px auto 31px;
+                  }
+
+                  .otoiawase_dd {
+                    margin: 16px 0;
+                  }
+                  .name_dd {
+                    margin: 16px 0;
+                  }
+                  .email_dd {
+                    margin: 16px 0;
+                  }
+                  .tel_dd {
+                    margin: 16px 0;
+                  }
+                  .message_dd {
+                    margin: 96px 0 0 0;
+                  }
+              }
+              .green-btn {
+                margin: 197px auto 0;
+                font-size: 16px;
+                font-weight: bold;
+                max-width: 200px;
+                width: 100%;
+                height: 50px;
+              }
+          }  
+      }
+    }
+  }
+}

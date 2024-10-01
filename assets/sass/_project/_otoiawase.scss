@@ -1,0 +1,514 @@
+@use "../_foundation/mixin"as mixin;
+@use "../_foundation/base"as base;
+
+#otoiawase {
+  max-width: 960px;
+  width: 100%;
+  margin: 131px  auto 0 auto;
+  padding: 0 -6px 0 24px;
+    
+
+    .section-title {
+      margin: 60px 0 45px 0px;
+    }
+
+    .section-text {
+      font-size: 16px;
+      margin: -19px 0 44px 0px;
+    }
+
+    .form-detail {
+      &__wrapper {
+        max-width: 960px;
+        width: 100%;
+        background-color: #FFFFFF;
+        box-shadow: 1px 1px 10px #00000029;
+        border-radius: 100px;
+        padding: 79px 50px 81px 50px;
+        margin: 0 0 160px;
+          &--inner {
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+            form {
+              .form-list {
+                dt {
+                  label {
+                      font-size: 20px;
+                      font-weight: bold;
+                      display: flex;
+                      align-items: center;
+                      margin: 0;
+                    }
+                    span {
+                      width: 34px;
+                      font-size: 12px;
+                      font-weight: normal;
+                      color: white;
+                      background-color: #93C572;
+                      margin-left: 8px;
+                      border-radius: 5px;
+                      text-align: center;
+                      padding: 1px 5px;
+                    }
+                }
+
+                .otoiawase_dt {
+                  margin: 0 0 8px 0 ;
+                }
+                .name_dt {
+                  margin: 34px 0 26px 0 ;
+                }
+                .email_dt {
+                  margin: 35px 0 10px 0 ;
+                }
+                .tel_dt {
+                  margin: 36px 0 9px 0;
+                }
+                .message_dt {
+                  margin: -5px 0 -7px 0;
+                }
+
+                dd {
+                  max-width: 500px;
+                  width:100%;
+                  height: 50px;
+                  margin: 0;
+                    input {
+                      width:100%;
+                      height: 100%;
+                      cursor: pointer;
+                      padding-left: 6px;
+                      border: 1px solid #93C572;
+                      border-radius: 5px;
+                      display: flex;
+                      align-items: center;
+                      padding-inline: 2px;
+                      padding-left: 20px;
+                        &:focus {
+                          outline: 2px solid #93C572;
+                        }
+
+                        &#name {
+                          margin: -17px 0 0 0;
+                        }
+                    } 
+
+                    textarea {
+                      border: 1px solid #93C572;
+                      border-radius: 5px;
+                      display: flex;
+                      align-items: center;
+                      padding-inline: 2px;
+                      cursor: pointer;
+                      width: 100%;
+                      height: 100%;
+                      resize: none;
+                      padding: 6px;
+                      &:focus {
+                        outline: 2px solid #93C572;
+                      }
+                    }
+
+                    &.pulldown {
+                        border: 1px solid #93C572;
+                        border-radius: 5px;
+                        display: flex;
+                        align-items: center;
+                        padding-inline: 2px;
+                        max-width: 400px;
+                        width:100%;
+                        font-size: 16px;
+                        align-items: center;
+                        position: relative; // 追加
+                        
+                        .select-selected {
+                          width: 100%;
+                          font-size: 16px;
+                          cursor: pointer;
+                          display: flex;
+                          align-items: center;
+                          height: 100%;
+                          color: #93c572;
+                          font-weight: bold;
+                          border-radius: 5px;
+                        }
+        
+                        .select-selected::after {
+                          content: "\25BC";
+                          position: absolute;
+                          right: 20px;
+                          color: #93c572;
+                        }
+        
+                        .select-items {
+                          position: absolute;
+                          background-color: #F9F9F9;
+                          border: 1px solid #93c572;
+                          border-radius: 5px;
+                          z-index: 99;
+                          width: 100%;
+                          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                          display: block;
+                          left: 0px;
+                          top: 100%;
+                        
+                        }
+        
+                        .select-items div {
+                          padding: 10px;
+                          cursor: pointer;
+                          color: #93c572;
+                          font-weight: bold;
+                          transition: 0.2s;
+                          display: flex;
+                          align-items: center;
+                        }
+
+                        .items__2 {
+                          border-top:2px dashed #555555;
+                          border-bottom:2px dashed #555555;
+                          padding-left:5px ;
+                        }
+
+                        
+        
+                        .select-items div:hover {
+                          background-color: #93c572;
+                          color: #fff;
+                        }
+        
+                        .select-hide {
+                          display: none;
+                        }
+        
+                        .select-arrow-active::after {
+                          content: "\25B2";
+                        }
+                    }  
+
+                    &.tel_dd {
+                      margin: 0 0 42px;
+                    }
+                    
+                    &.message_dd {
+                      max-width: 600px;
+                      width:100%;
+                      height: 150px;
+                      margin: 14px 0 0;
+                    }        
+                    
+                    
+                }
+
+                .error__msg--pulldown,
+                .error__msg--name,
+                .error__msg--email {
+                  color: red;
+                  font-size: 16px;
+                  margin: 5px 0 20px;
+                }
+                .error__msg--message {
+                  color: red;
+                  font-size: 16px;
+                  margin: 5px 0 29px;
+              }
+            }  
+          }
+
+          
+          .green-btn {
+            margin: 50px  auto 0;
+            font-size: 16px;
+            font-weight: bold;
+            max-width: 200px;
+            width: 100%;
+            height: 50px;
+          }
+      }  
+    }
+  }
+}
+
+
+
+
+@include mixin.TAB {
+  
+  #otoiawase {
+    margin: 20px auto 60px;
+
+      
+      .section-text {
+        font-size: 16px;
+        margin: 0 0 50px;
+      }
+      .form-detail {
+        &__wrapper {
+          border-radius: 50px;
+          padding: 30px 20px;
+          margin: 0 0 61px;
+            &--inner {
+                .form-list {
+                    
+                    &.message_dd {
+                      max-width: 600px;
+                      width:100%;
+                      height: 150px;
+                      margin: 10px 0 31px;
+                    }              
+                }
+            }
+        }  
+    }
+  }
+}
+
+
+@include mixin.SP {
+  
+  #otoiawase {
+    margin: 8px auto 60px;
+    padding: 0px 7px;
+      .breadcrumb {
+        margin: 0;
+      }
+      .section-title {
+        margin: -20px 0 -15px -2px;
+        h2 {
+          margin: 43.58px 0 25.42px ;
+        }  
+      }
+      .section-text {
+        font-size: 16px;
+        margin: 0px 0px 50px -2px;
+        line-height: 27px;
+      }
+
+      .form-detail {
+        &__wrapper {
+          max-width: 960px;
+          width: 100%;
+          background-color: #FFFFFF;
+          box-shadow: 1px 1px 10px #00000029;
+          border-radius: 50px;
+          padding: 18px 19px 32px 19px;
+          margin: -17px 0 3px;
+            &--inner {
+              max-width: 600px;
+              width: 100%;
+              margin: 0 auto;
+              form {
+                .form-list {
+                  dt {
+                    label {
+                        font-size: 20px;
+                        font-weight: bold;
+                        display: flex;
+                        align-items: center;
+                        margin: 8px 0px -5px 0px;
+                      }
+                      span {
+                        width: 34px;
+                        font-size: 12px;
+                        font-weight: normal;
+                        color: white;
+                        background-color: #93C572;
+                        margin-left: 9px;
+                        border-radius: 5px;
+                        text-align: center;
+                        padding: 1px 5px;
+                      }
+                  }
+
+                  .otoiawase_dt {
+                    margin: 0 0 8px 0 ;
+                  }
+                  .name_dt {
+                    margin: 26px 0 20px 0 ;
+                  }
+                  .email_dt {
+                    margin: 25px 0 8px 0;
+                  }
+                  .tel_dt {
+                    margin: 26px 0 9px 0;
+                  }
+                  .message_dt {
+                    margin: -17px 0 -12px 0;
+                  }
+    
+                  dd {
+                    max-width: 500px;
+                    width:100%;
+                    height: 50px;
+                    margin: 8px 0 0;
+                      input {
+                        width:100%;
+                        height: 100%;
+                        cursor: pointer;
+                        padding-left: 6px;
+                        border: 1px solid #93C572;
+                        border-radius: 5px;
+                        display: flex;
+                        align-items: center;
+                        padding-inline: 2px;
+                        padding-left: 20px;
+                          &:focus {
+                            outline: 2px solid #93C572;
+                          }
+                      } 
+  
+                      textarea {
+                        border: 1px solid #93C572;
+                        border-radius: 5px;
+                        display: flex;
+                        align-items: center;
+                        padding-inline: 2px;
+                        cursor: pointer;
+                        width: 100%;
+                        height: 100%;
+                        resize: none;
+                        padding: 6px;
+                        &:focus {
+                          outline: 2px solid #93C572;
+                        }
+                      }
+  
+                      &.pulldown {
+                          border: 1px solid #93C572;
+                          border-radius: 5px;
+                          display: flex;
+                          align-items: center;
+                          padding-inline: 2px;
+                          max-width: 400px;
+                          width:100%;
+                          font-size: 16px;
+                          align-items: center;
+                          position: relative; // 追加
+                          
+                          .select-selected {
+                            width: 100%;
+                            font-size: 16px;
+                            cursor: pointer;
+                            display: flex;
+                            align-items: center;
+                            height: 100%;
+                            color: #93c572;
+                            font-weight: bold;
+                            border-radius: 5px;
+                          }
+          
+                          .select-selected::after {
+                            content: "\25BC";
+                            position: absolute;
+                            right: 20px;
+                            color: #93c572;
+                          }
+          
+                          .select-items {
+                            position: absolute;
+                            background-color: #F9F9F9;
+                            border: 1px solid #93c572;
+                            border-radius: 5px;
+                            z-index: 99;
+                            width: 100%;
+                            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                            display: block;
+                            left: 0px;
+                            top: 100%;
+                          
+                          }
+          
+                          .select-items div {
+                            padding: 10px;
+                            cursor: pointer;
+                            color: #93c572;
+                            font-weight: bold;
+                            transition: 0.2s;
+                            display: flex;
+                            align-items: center;
+                          }
+  
+                          .items__2 {
+                            border-top:2px dashed #555555;
+                            border-bottom:2px dashed #555555;
+                            padding-left:5px ;
+                          }
+  
+                          
+          
+                          .select-items div:hover {
+                            background-color: #93c572;
+                            color: #fff;
+                          }
+          
+                          .select-hide {
+                            display: none;
+                          }
+          
+                          .select-arrow-active::after {
+                            content: "\25B2";
+                          }
+                      }  
+  
+                      &.tel_dd {
+                        margin: 0 0 42px;
+                      }
+                      
+                      &.message_dd {
+                        max-width: 600px;
+                        width:100%;
+                        height: 150px;
+                        margin: 14px 0 0;
+                      }              
+                  }
+  
+                  .error__msg--pulldown,
+                  .error__msg--name,
+                  .error__msg--email {
+                    color: red;
+                    font-size: 16px;
+                    margin: 5px 0 20px;
+                  }
+                  .error__msg--message {
+                    color: red;
+                    font-size: 16px;
+                    margin: 5px 0 29px;
+                }
+              }  
+            }
+            .green-btn {
+              margin: 6px  auto 0;
+              font-size: 16px;
+              font-weight: bold;
+              max-width: 200px;
+              width: 100%;
+              height: 50px;
+            }
+          }  
+        }
+      }
+
+      
+
+      .otoiawase-detail {
+        &__wrapper {
+          border-radius: 50px;
+          padding: 30px 20px;
+          margin: 0 0 61px;
+            &--inner {
+                .form-list {
+                    
+                    &.message_dd {
+                      max-width: 600px;
+                      width:100%;
+                      height: 150px;
+                      margin: 10px 0 31px;
+                    }              
+                }
+            }
+        }  
+    }
+   
+  }
+}

@@ -1,0 +1,213 @@
+@use "../_foundation/mixin"as mixin;
+@use "../_foundation/base"as base;
+
+
+#news {
+  width: 100%;
+  margin: 120px 0 auto;
+
+  .news-flex {
+    // box-sizing: content-box;
+    max-width: 960px;
+    width: 100%;
+    height: fit-content;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "textarea newslist"
+      "news_view none";
+
+    &__textarea {
+      width: 100%;
+      font-size: 16px;
+      grid-area: textarea;
+
+      .section-title {
+        margin: 77px 0 45px 8px;
+      }
+
+      &--text {
+        font-size: 16px;
+        line-height: 27px;
+        margin: -4px 0px 0px 9px;
+      }
+    }
+
+    &__newslist {
+      width: 49.5vw;
+      // max-width: 100%;
+      margin-right: calc(50% - 49.5vw);
+      background-color: white;
+      box-shadow: 1px 1px 10px #00000029;
+      border-radius: 100px 0px 0px 100px;
+      padding: 80px 26px 35px 50px;
+      grid-area: newslist;
+      transition: all 0.3s ease; //追加
+
+      a {
+        opacity: 1;
+        transition: all 0.3s ease; //追加
+      }
+
+      a:hover {
+        opacity: 0.7;
+        transition: all 0.3s ease; //追加
+      }
+
+      &--date {
+        font-size: 16px;
+        margin: 2px 8px 18px;
+        letter-spacing: 0.8px;
+      }
+
+      // .category-list  {
+      //   display: inline-block; /* 横に並べるためのスタイル */
+      //   margin-left: 10px; /* 日付との間に余白をつける */
+      //   width: 96px;
+      //   height: 26px;
+      //   font-size: 14px;
+      //   color: #FFFFFF;
+      //   background-color: #93C572;
+      //   border-radius: 5px;
+      //   text-align: center;
+      //   padding: 6px 20px 6px 21px;
+      // }
+
+      &--text {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0 0px 36px 8px;
+        line-height: 34px;
+        letter-spacing: 0;
+      }
+    }
+
+    .green-btn {
+      grid-area: news_view;
+      transform: translateY(-190px);
+      margin: 58px 0px 0px 58px;
+      letter-spacing: 1.4px;
+      padding: 2px 0 0 16px;
+    }
+  }
+}
+
+
+@include mixin.TAB {
+  #news {
+    .news-flex {
+      display: flex;
+      flex-direction: column;
+      padding-left: 14px;
+
+      &__textarea {
+        padding: 30px 0;
+
+        .section-title {
+          margin: 0;
+        }
+
+        &--text {
+          font-size: 16px;
+          padding: 27px 0px 0px 0px;
+
+        }
+      }
+
+      &__newslist {
+        width: 100%;
+        border-radius: 50px 0px 0px 50px;
+        padding: 30px 22px 30px 21px;
+
+
+        &--date {
+          font-size: 14px;
+          margin: 0 0 24px;
+
+          span {
+            font-size: 14px;
+          }
+        }
+
+        &--text {
+          font-size: 16px;
+          margin: 0 0 24px;
+        }
+      }
+
+      .green-btn {
+        margin: 30px auto;
+        transform: translateY(0px);
+      }
+    }
+  }
+
+}
+
+
+
+
+@include mixin.SP {
+
+  #news {
+    margin: 60px auto 0;
+
+    .news-flex {
+      display: flex;
+      flex-direction: column;
+      padding-left: 14px;
+
+      &__textarea {
+        padding: 30px 0;
+
+        .section-title {
+          margin: -10px 0 0 0;
+        }
+
+        &--text {
+          font-size: 16px;
+          padding: 26px 0px 0px 1px;
+          margin: 0 0px 1px -2px;
+          line-height: 27px;
+        }
+      }
+
+      &__newslist {
+        width: 100%;
+        border-radius: 50px 0px 0px 50px;
+        padding: 0px 22px 0px 21px;
+
+        &--date {
+          font-size: 14px;
+          margin: 33px 0 24px;
+          letter-spacing: -1px;
+          font-family: 'Archivo Narrow';
+
+          span {
+            font-size: 14px;
+            margin: 0 0 0 28px;
+            padding: 3px 19px;
+            line-height: 24px;
+            letter-spacing: 0px;
+          }
+        }
+
+        &--text {
+          font-size: 16px;
+          margin: -20px 0 35px 0px;
+          line-height: 27px;
+          letter-spacing: 0px;
+        }
+      }
+
+      .green-btn {
+        margin: 30px auto;
+        transform: translateY(0px);
+        padding: 0 0px 1px 5px;
+        font-family: "Archivo Narrow";
+        letter-spacing: -0.5px;
+      }
+    }
+  }
+}

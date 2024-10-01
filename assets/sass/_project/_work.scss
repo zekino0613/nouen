@@ -1,0 +1,245 @@
+@use "../_foundation/mixin"as mixin;
+@use "../_foundation/base"as base;
+
+
+#work {
+      margin: 0 0 50px;
+    .work-box {
+      width: 87%;
+      margin-top: 98px;
+      margin-left: calc(50% - 50vw);
+      box-shadow: 1px 1px 10px #00000029;
+      border-radius: 0px 100px 100px 0px;
+      height: 730px;
+      overflow: hidden; /* 親要素からはみ出さないようにする */
+      .work {   
+        &__inner {
+          width: 960px;
+          margin-left: auto;
+          padding-top: 75px;
+          padding: 0 15px;
+          .section-title {
+            margin: 77px 0 29.5px -17px;
+            // width: 172px;
+          }
+          &--tabs {
+            display: flex;
+            gap: 19px;
+            margin: 5px 0px 51px -17px;
+            .tab-button {
+              display: block;
+              text-align: center;
+              width: 190px;
+              height: 65px;
+              font-size: 20px;
+              font-weight: bold;
+              background-color: #FFFFFF;
+              color: #F7B560;
+              background: #f0f0f0;
+              box-shadow: 0px 3px 6px #00000029;
+              border-radius: 20px;
+              padding: 1.4rem;
+              cursor: pointer;
+              border: none;
+              transition: all 0.3s ease; //追加
+            }
+            .tab-button:hover {
+              background-color: #93C572;
+              color: #FFFFFF;
+              transition: all 0.3s ease; //追加
+            }
+            .tab-button.active {
+              background-color: #93C572;
+              color: #FFFFFF;
+              transition: all 0.3s ease; //追加
+            }
+          }
+
+      
+          &--text {
+            .tab-text {
+              display: none;
+              font-size: 16px;
+              letter-spacing: 0px;
+              line-height: 24px;
+              margin: -6px 0 -5px -17px;
+              // font-family: "游ゴシック体";
+            }
+            
+            .tab-text.active {
+              display: block;
+            }
+          }
+        }
+      }
+
+    .swiper-container {
+        display: none;
+        // width: 100;
+        padding-top: 69px;
+        margin-right: 50px;
+        overflow: hidden; /* 親要素からはみ出さないようにする */
+          .swiper-wrapper {
+            transition-timing-function: linear;
+              .swiper-slide {
+                  img {
+                    width: 300px;
+                    height: 250px;
+                    object-fit: cover; /* 画像が親要素からはみ出さないようにする */
+                  }
+              }      
+          }
+    }  
+
+    .swiper-container.active {
+      display: block;
+    }
+  }
+}
+
+@include mixin.TAB {
+  #work {
+    // margin: 0 0 37px;
+    .work-box {
+      width: 100%;
+      margin: 50px auto;
+      box-shadow: 1px 1px 10px #00000029;
+      border-radius: 0px;
+      height: auto;
+      overflow: hidden; /* 親要素からはみ出さないようにする */
+        .work {   
+          &__inner {
+            width: 100%;
+            margin: 50px auto 0;
+            padding: 0 15px;
+              .section-title {
+                margin: 0 0 26.5px 0;
+                // width: 172px;
+              }
+              &--tabs {
+                display: flex;
+                gap: 8px;
+                margin-bottom: 37px;
+                .tab-button {
+                  display: block;
+                  text-align: center;
+                  max-width: 180px;
+                  width:100%;
+                  height: 55px;
+                  font-size: 16px;
+                }          
+              }
+
+      
+              &--text {
+                .tab-text {
+                  display: none;
+                  font-size: 16px;
+                }
+                
+                .tab-text.active {
+                  display: block;
+                }
+              }
+          }
+        }  
+
+        .swiper-container {
+          display: none;
+          padding: 40px 0 50px 0;
+          margin: 0;
+        }  
+
+        .swiper-container.active {
+          display: block;
+        }
+    }
+  }
+}
+
+@include mixin.SP {
+  #work {
+    margin: 0;
+    .work-box {
+      width: 100%;
+      margin: 77px auto 20px;
+      box-shadow: 1px 1px 10px #00000029;
+      border-radius: 0px;
+      height: auto;
+      overflow: hidden; /* 親要素からはみ出さないようにする */
+        .work {   
+          &__inner {
+            width: 100%;
+            padding: 0px 15px 0;
+              .section-title {
+                margin: -1px -1px 32.5px -1px;
+                // width: 172px;
+              }
+              &--tabs {
+                display: flex;
+                justify-content: center;
+                margin: 0px auto 36px;
+                .tab-button {
+                  display: block;
+                  text-align: center;
+                  max-width: 110px;
+                  width:100%;
+                  height: 50px;
+                  font-size: 16px;
+                  border-radius: 10px;
+                  padding: 1rem;
+
+                  }                                      
+
+                  .font {
+                    font-size: 11px;
+                    padding: 1.2rem 0.5rem;
+                  }
+                }          
+              
+      
+              &--text {
+                .tab-text {
+                  display: none;
+                  text-align: left;
+                  font-size: 16px;
+                  line-height: 24px;
+                  letter-spacing: 0.4px; //追加
+                  letter-spacing: 0 ;
+                  margin: auto 0; 
+                  // padding: 0 15px;
+                }
+                
+                .tab-text.active {
+                  display: block;
+                }
+              }
+          }
+        }  
+
+        .swiper-container {
+          display: none;
+          // width: 100;
+          padding: 0;
+          margin: 0;
+          overflow: hidden; /* 親要素からはみ出さないようにする */
+            .swiper-wrapper {
+              margin: 36px auto  51px;
+              transition-timing-function: linear;
+                .swiper-slide {
+                    img {
+                      width: 250px;
+                      height: 209px;
+                      border-radius: 20px;
+                      object-fit: cover; /* 画像が親要素からはみ出さないようにする */
+                    }
+                }      
+            }
+      }  
+
+        .swiper-container.active {
+          display: block;
+        }
+    }
+  }
+}

@@ -1,0 +1,196 @@
+@use "../_foundation/mixin"as mixin;
+@use "../_foundation/base"as base;
+
+#comp {
+  max-width: 960px;
+  width: 100%;
+  margin: 135px  auto 0 auto;
+  // padding: 0 16px 0 12px;
+    
+
+    .section-title {
+      margin:58px 0 38px 0;
+    }
+
+
+    .form-detail {
+      &__wrapper {
+        max-width: 960px;
+        width: 100%;
+        background-color: #FFFFFF;
+        box-shadow: 1px 1px 10px #00000029;
+        border-radius: 100px;
+        padding: 80px 50px;
+        margin: 0 0 160px;
+          &--inner {
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+              .comp-list {
+                text-align: center;
+                &__title {
+                  font-size: 20px;
+                  font-weight: bold;
+                  margin: -6px 0 0 -2px;
+                }
+
+                &__text {
+                  font-size: 16px;
+                  margin: 14px auto 40px -7px;
+                }
+
+                .otoiawase-pc {
+                  color: #93C572;
+                  &__title {
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin: -13px 0 0 -7px;
+                    span {
+                      font-size: 30px;
+                    }
+                  }
+                  &__time {
+                    font-size: 20px;
+                    font-weight: bold;
+                  }
+                }
+
+                .otoiawase-sp {
+                  display: none;
+                }
+
+              }
+              .green-btn {
+                margin: 41px auto 0;
+                font-size: 16px;
+                font-weight: bold;
+                max-width: 200px;
+                width: 100%;
+                height: 50px;
+              }
+          }  
+      }
+    }
+}
+
+
+
+@include mixin.TAB {
+  #comp {
+      .breadcrumb {
+        margin: 0;
+      }
+      .section-title {
+        margin: 0;
+        h2 {
+          margin: 43.58px 0 25.42px ;
+        }  
+      }
+
+      .form-detail {
+        &__wrapper {
+          border-radius: 50px;
+          padding: 30px 20px;
+          margin: 0 0 61px;
+          .comp-list {
+            text-align: center;
+            &__title {
+              font-size: 20px;
+              font-weight: bold;
+            }
+
+            &__text {
+              font-size: 16px;
+              margin: 20px auto 30px;
+            }
+
+
+            .green-btn {
+              margin: 30px auto 0;
+              font-size: 16px;
+              font-weight: bold;
+              max-width: 200px;
+              width: 100%;
+              height: 50px;
+            }
+          }
+        }  
+    }
+  }
+}
+
+
+@include mixin.SP {
+  #comp {
+    margin: 8px auto 60px;
+    padding: 0 7px;  
+    .section-title {
+      margin: 0;
+      h2 {
+        margin: 23.58px 0 13.42px -2px;
+      }  
+    }
+      .form-detail {
+        &__wrapper {
+          border-radius: 50px;
+          padding: 30px 20px;
+          margin: 0 ;
+          .comp-list {
+            text-align: center;
+            &__title {
+              font-size: 20px;
+              font-weight: bold;
+              line-height: 34px;
+              margin: -4px 0 0px 0px;
+
+            }
+
+            &__text {
+              font-size: 16px;
+              margin: 20px auto 30px;
+              line-height: 24px;
+              margin: 8px 0 21px 0px;
+            }
+
+            .otoiawase-pc {
+              display: none;
+            }
+
+            .otoiawase-sp {
+              display: block;
+              color: #93C572;
+                &__title {
+                  font-size: 14px;
+                  font-weight: bold;  
+                }  
+                &__tel {
+                  font-size: 20px;
+                  font-weight: bold;
+                  margin: -3px 0 0;
+                }
+
+              
+                &__time {
+                  font-size: 20px;
+                  font-weight: bold;
+                }
+
+                &__time-title {
+                  font-size: 14px;
+                  font-weight: bold;
+                  margin: 2px 0 -15px 0;
+                }
+            }
+            .green-btn {
+              margin: 30px auto 0;
+              font-size: 16px;
+              font-weight: bold;
+              max-width: 200px;
+              width: 100%;
+              height: 50px;
+            }
+          }
+        }  
+    }
+  }
+}
